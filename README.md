@@ -5,11 +5,11 @@ Home: https://gitlab.cern.ch/lhcb-dpa/analysis-productions/LbAPCommon
 
 Package license: GPL-3.0-or-later
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/lbapcommon-feedstock/blob/master/LICENSE.txt)
 
 Summary: Common utilities used by LHCb DPA WP2 related software
 
-
+Development: https://gitlab.cern.ch/lhcb-dpa/analysis-productions/LbAPCommon
 
 Current build status
 ====================
