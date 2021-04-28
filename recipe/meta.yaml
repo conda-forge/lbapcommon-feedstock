@@ -32,7 +32,9 @@ requirements:
 test:
   imports:
     - LbAPCommon
+    - LbAPCommon.cern_sso
     - LbAPCommon.linting
+    - LbAPCommon.validators
   commands:
     - pip check
   requires:
