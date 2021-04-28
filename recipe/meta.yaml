@@ -1,5 +1,5 @@
 {% set name = "LbAPCommon" %}
-{% set version = "0.1.0" %}
+{% set version = "0.1.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/LbAPCommon-{{ version }}.tar.gz
-  sha256: d09801c28aa9dde2a03e678a517ee0eac4f6f89f6b2eaab9b9150f09da0898b8
+  sha256: 7faeb2bf59bbc7db84c91586b1d3fe31d51cb7c85d5964f4434f864e824b0c14
 
 build:
   number: 0
@@ -18,19 +18,23 @@ build:
 requirements:
   host:
     - pip
-    - python !=3.0,!=3.1,!=3.2,!=3.3,!=3.4,!=3.5
+    - python >=3.6
     - setuptools_scm
   run:
     - jinja2
     - lxml
-    - python !=3.0,!=3.1,!=3.2,!=3.3,!=3.4,!=3.5
+    - python >=3.6
     - pyyaml
     - strictyaml
+    - requests
+    - requests-kerberos
 
 test:
   imports:
     - LbAPCommon
+    - LbAPCommon.cern_sso
     - LbAPCommon.linting
+    - LbAPCommon.validators
   commands:
     - pip check
   requires:
