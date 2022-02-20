@@ -1,5 +1,5 @@
 {% set name = "lbapcommon" %}
-{% set version = "0.5.10" %}
+{% set version = "0.6.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/LbAPCommon-{{ version }}.tar.gz
-  sha256: aed6e3cbc82cc5227bbd90f2e43f35f2b2e2ea16dcac5b94670ab0c982f24bd1
+  sha256: f9f409996357d6f1f95c5523cc8246e7ffea694b5a07d91703dfdb1c26906988
 
 build:
   number: 0
@@ -18,18 +18,20 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python >=3.9
     - setuptools-scm
   run:
     - awkward >=1.0.0
+    - beautifulsoup4
     - boost-histogram
     - hist
     - jinja2
     - lxml
     - matplotlib-base
-    - python >=3.8
+    - python >=3.9
     - pyyaml
     - requests
+    - requests-gssapi
     - requests-kerberos
     - setuptools
     - strictyaml
