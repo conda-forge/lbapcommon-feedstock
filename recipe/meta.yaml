@@ -1,5 +1,5 @@
 {% set name = "LbAPCommon" %}
-{% set version = "0.6.4" %}
+{% set version = "0.6.5" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/LbAPCommon-{{ version }}.tar.gz
-  sha256: 87442ebf7908546575dccd334b3627977af29ebd3a57ca25390d9f945aa244a0
+  sha256: 4533b225fe22209f29cdfe31fcd75fd33ed18a210661f5bea90cadc328e3964d
 
 build:
   number: 0
