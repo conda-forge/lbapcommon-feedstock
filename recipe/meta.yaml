@@ -16,11 +16,11 @@ build:
 
 requirements:
   host:
-    - python >=3.9
+    - python
     - setuptools-scm
     - pip
   run:
-    - python >=3.9
+    - python
     - awkward >=1.0.0
     - jinja2
     - pyyaml
