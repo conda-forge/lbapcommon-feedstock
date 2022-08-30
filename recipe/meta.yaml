@@ -1,6 +1,5 @@
-{% set name = "LbAPCommon" %}
-{% set version = "0.7.1" %}
-
+{% set name = "lbapcommon" %}
+{% set version = "0.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,40 +7,36 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/LbAPCommon-{{ version }}.tar.gz
-  sha256: 105c9ab08f4636eac3c175bb6814050b56cd7637eb61d616fccea62eaad3ebda
+  sha256: 3aed7b10a3a2e10ad02e929c1f15fc2345e652a585429f9ccebd85ce43bce7f0
 
 build:
-  number: 0
-  noarch: python
+  skip: true  # [py<39]
   script: {{ PYTHON }} -m pip install . -vv
+  number: 0
 
 requirements:
   host:
-    - pip
     - python >=3.9
     - setuptools-scm
+    - pip
   run:
+    - python >=3.9
     - awkward >=1.0.0
-    - beautifulsoup4
+    - jinja2
+    - pyyaml
     - boost-histogram
     - hist
-    - jinja2
-    - lxml
     - matplotlib-base
-    - python >=3.9
-    - pyyaml
-    - requests
-    - requests-gssapi
-    - requests-kerberos
     - setuptools
-    - strictyaml
     - uproot >=4.0.0
-    - xrootd
+    - strictyaml
+    - lxml
+    - requests
+    - keyutils  # [linux]
 
 test:
   imports:
     - LbAPCommon
-    - LbAPCommon.cern_sso
     - LbAPCommon.linting
     - LbAPCommon.validators
   commands:
