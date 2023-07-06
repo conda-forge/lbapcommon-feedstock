@@ -10,32 +10,30 @@ source:
   sha256: 359e404a250934a1622576c767f147a572749bbf9821c5ea73d6451da011cffc
 
 build:
-  skip: true  # [py<39]
+  noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
 
 requirements:
-  build:
-    - python                                 # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
-    - python
+    - python >=3.9
     - setuptools-scm
     - pip
   run:
-    - python
-    - awkward >=1.0.0
+    - python >=3.9
+    - strictyaml
     - jinja2
+    - lxml
     - pyyaml
+    - setuptools
     - boost-histogram
     - hist
-    - matplotlib-base
-    - setuptools
-    - uproot >=4.0.0
-    - strictyaml
-    - lxml
+    - pandas
+    - numpy
     - requests
-    - keyutils  # [linux]
+    - uproot >=5.0.0
+    - awkward >=2.1.1
+    - matplotlib-base
 
 test:
   imports:
