@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/lbapcommon-feed
 
 Home: https://gitlab.cern.ch/lhcb-dpa/analysis-productions/LbAPCommon
 
-Package license: GPL-3.0
+Package license: GPL-3.0-or-later
 
 Summary: Common utilities used by LHCb DPA WP2 related software
 
@@ -145,5 +145,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@AidanWiederhold](https://github.com/AidanWiederhold/)
 * [@chrisburr](https://github.com/chrisburr/)
 
