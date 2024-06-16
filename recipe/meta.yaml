@@ -34,6 +34,7 @@ requirements:
     - uproot >=5.0.0
     - awkward >=2.1.1
     - matplotlib-base
+    - networkx
 
 test:
   imports:
