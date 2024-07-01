@@ -35,6 +35,7 @@ requirements:
     - awkward >=2.1.1
     - matplotlib-base
     - networkx
+    - lbdiracwrappers
 
 test:
   imports:
