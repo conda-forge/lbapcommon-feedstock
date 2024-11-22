@@ -1,5 +1,5 @@
 {% set name = "lbapcommon" %}
-{% set version = "0.11.6" %}
+{% set version = "0.12.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3b7b4d49c2ab01edbabfc0a8711129ce66dfd080dad9353e2d766268eed9cf19
+  sha256: e9672c47f55da0bee44b0c21d70e4a3043fcb80108f70f105b65f3a72393e6ac
 
 build:
   noarch: python
@@ -36,6 +36,7 @@ requirements:
     - matplotlib-base
     - networkx
     - lbdiracwrappers
+    - pydantic >=2
 
 test:
   imports:
