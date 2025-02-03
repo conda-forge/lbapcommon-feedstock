@@ -1,0 +1,70 @@
+schema_version: 1
+
+context:
+  name: lbapcommon
+  version: 0.12.12
+  python_min: 3.12
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
+  sha256: 539eedf33296095eb705c5147580291d8b66247dbf1ccb78c6dee748b0668288
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - setuptools-scm
+    - pip
+    - setuptools
+  run:
+    - python >=${{ python_min }}
+    - strictyaml
+    - jinja2
+    - lxml
+    - pyyaml
+    - setuptools
+    - boost-histogram
+    - hist
+    - pandas
+    - numpy
+    - requests
+    - uproot >=5.0.0
+    - awkward >=2.1.1
+    - matplotlib-base
+    - networkx
+    - lbdiracwrappers
+    - pydantic >=2
+
+tests:
+  - python:
+      imports:
+        - LbAPCommon
+        - LbAPCommon.linting
+        - LbAPCommon.validators
+  - requirements:
+      run:
+        - pip
+        - python ${{ python_min }}
+    script:
+      - pip check
+
+about:
+  summary: Common utilities used by LHCb DPA WP2 related software
+  license: GPL-3.0-or-later
+  license_file: LICENSE
+  homepage: https://gitlab.cern.ch/lhcb-dpa/analysis-productions/LbAPCommon
+  repository: https://gitlab.cern.ch/lhcb-dpa/analysis-productions/LbAPCommon
+
+extra:
+  recipe-maintainers:
+    - ryuwd
+    - AidanWiederhold
+    - chrisburr
