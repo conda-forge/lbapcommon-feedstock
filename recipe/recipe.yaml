@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: lbapcommon
-  version: "0.12.20"
+  version: "0.13.1"
   python_min: '3.12'
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 8d7a49cae05732a6d6674fc041b6fa94db5212248bef947ed069a401701a8d16
+  sha256: 298be5b53ecd382aa41075f3ad6a39018625238de234e02f0a0b8a0d1736fc29
 
 build:
   number: 0
