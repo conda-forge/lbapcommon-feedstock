@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: lbapcommon
-  version: "0.15.0"
+  version: "0.15.1"
   python_min: '3.12'
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 33310a3e90023968291d4d43fc005ccbbde8a15ed1f35d33331aa867466afb93
+  sha256: cb1bc60853b916ea1cae25818b2d813b85ea4f8abfba900ca96198de7aca60cc
 
 build:
   number: 0
@@ -43,6 +43,8 @@ requirements:
     - lbdiracwrappers
     - pydantic >=2
     - quickjs
+    - cwl-utils
+    - cwltool
 
 tests:
   - python:
