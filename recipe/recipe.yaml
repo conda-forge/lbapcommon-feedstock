@@ -42,6 +42,7 @@ requirements:
     - networkx
     - lbdiracwrappers
     - pydantic >=2
+    - quickjs
 
 tests:
   - python:
@@ -55,6 +56,11 @@ tests:
         - python ${{ python_min }}
     script:
       - pip check
+  - script:
+      - python test_transform.py
+    files:
+      source:
+        - test_transform.py
 
 about:
   summary: Common utilities used by LHCb DPA WP2 related software
