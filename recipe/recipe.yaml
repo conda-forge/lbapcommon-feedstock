@@ -61,7 +61,7 @@ tests:
   - script:
       - python test_transform.py
     files:
-      source:
+      recipe:
         - test_transform.py
 
 about:
